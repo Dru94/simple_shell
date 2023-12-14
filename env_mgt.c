@@ -28,7 +28,7 @@ int set_environment(char **arg_array)
 		free(arg_array);
 		exit(EXIT_SUCCESS);
 	}
-	return 0;
+	return (0);
 }
 
 /**
@@ -59,11 +59,12 @@ int unset_environment(char **arg_array)
 		free(arg_array);
 		exit(EXIT_SUCCESS);
 	}
-	return 0;
+	return (0);
 }
 
 /**
- * custom_set_environment - Function sets a custom environment variable with the
+ * custom_set_environment -
+ * Function sets a custom environment variable with the
  * specified name and value
  *
  * @name: function argument
@@ -74,6 +75,7 @@ int unset_environment(char **arg_array)
 int custom_set_environment(const char *name, const char *value)
 {
 	char *args[3];
+
 	args[0] = (char *)name;
 	args[1] = (char *)value;
 	args[2] = NULL;
@@ -94,16 +96,20 @@ int custom_set_environment(const char *name, const char *value)
 }
 
 /**
- * custom_unset_enviroment - Function unsets a custom specified environment variable
+ * custom_unset_enviroment -
+ * Function unsets a custom specified environment variable
  *
  * @name: function argument
  *
  * Return: On success, the function returns 0
  */
+
 int custom_unset_enviroment(const char *name)
 {
 	char *args[3];
+
 	args[0] = (char *)name;
+
 	args[1] = NULL;
 	args[2] = NULL;
 
